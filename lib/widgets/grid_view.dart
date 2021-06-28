@@ -1,6 +1,7 @@
 import 'package:breaking_bad_quote_app/contollers/character_controller.dart';
 import 'package:breaking_bad_quote_app/contollers/homepage_controller.dart';
 import 'package:breaking_bad_quote_app/models/character_details.dart';
+import 'package:breaking_bad_quote_app/screens/details_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -30,6 +31,16 @@ class CharacterGridView extends StatelessWidget {
                     var character = characterController.characterList[index];
                     return GestureDetector(
                       onTap: (){
+                        Get.to(() => CharDetails(), arguments: [
+                          "${character.name}",
+                          "${character.birthday}",
+                          "${character.occupation}",
+                          "${character.img}",
+                          "${character.status}",
+                          "${character.nickname}",
+                          "${character.appearance}",
+                          "${character.portrayed}",
+                        ]);
                       },
                       child: Card(
                         clipBehavior: Clip.antiAlias,
