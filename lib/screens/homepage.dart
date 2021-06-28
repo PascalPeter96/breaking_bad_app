@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
         title: RichText(text: TextSpan(
           children: [
             TextSpan(
-              text: 'Br',
+              text: 'B',
               style: TextStyle(
                 color: Colors.green,
                 fontWeight: FontWeight.bold,
