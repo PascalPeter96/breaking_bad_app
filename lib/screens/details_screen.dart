@@ -209,18 +209,21 @@ class CharDetails extends StatelessWidget {
                     right: 30,
                     top: height*0.43,
                     child: Container(
-                      height: 16.h,
+                      height: 13.h,
                       width: 55.w,
                       decoration: BoxDecoration(
                           color: Colors.lightGreen,
-                        borderRadius: BorderRadius.all(Radius.circular(30)),
+                        borderRadius: BorderRadius.all(Radius.circular(30.sp)),
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(data[7], style: TextStyle(
-                          fontSize: 25.sp,
-                          fontWeight: FontWeight.w400
-                        ),),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(data[7], style: TextStyle(
+                            fontSize: 25.sp,
+                            fontWeight: FontWeight.w400
+                          ),),
+                        ),
                       ),
                     ),),
                   Padding(
