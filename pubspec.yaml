@@ -35,8 +35,13 @@ dependencies:
   fancy_bottom_navigation: ^0.3.3
   device_preview: ^0.7.3
   sizer: ^2.0.13
-  focused_menu: ^1.0.5
   iphone_has_notch: ^1.0.0
+  screenshot: ^1.2.1
+  path_provider: ^2.0.2
+  share_plus: ^2.1.4
+  image_gallery_saver: ^1.6.9
+  permission_handler: ^8.1.2
+
 
 
 
