@@ -1,4 +1,3 @@
-import 'package:breaking_bad_quote_app/constants/bbUrls.dart';
 import 'package:breaking_bad_quote_app/models/character.dart';
 import 'package:breaking_bad_quote_app/models/character_details.dart';
 import 'package:breaking_bad_quote_app/models/episode.dart';

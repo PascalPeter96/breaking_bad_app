@@ -1,14 +1,12 @@
 import 'package:breaking_bad_quote_app/contollers/character_details_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:screenshot/screenshot.dart';
 import 'package:sizer/sizer.dart';
 
 
 class CharDetails extends StatelessWidget {
   final CharacterDetailsController characterDetailsController =
   Get.put(CharacterDetailsController());
-  final _screenShotController = ScreenshotController();
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +38,8 @@ class CharDetails extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(30),
-                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(50.h),
+                        topLeft: Radius.circular(60),
                       ),),
 
                     child: Column(
@@ -50,7 +48,7 @@ class CharDetails extends StatelessWidget {
                         Wrap(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(top: 10),
+                              padding: const EdgeInsets.only(top:13),
                               child: RichText(text: TextSpan(
                                   children: [
                                     TextSpan(
@@ -184,7 +182,7 @@ class CharDetails extends StatelessWidget {
                             ],
                           ),
                           title: Container(
-                            height: 14.h,
+                            height: 10.h,
                             width: 55.w,
                             decoration: BoxDecoration(
                                 color: (data[4] =="Alive")
@@ -206,7 +204,7 @@ class CharDetails extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    right: 30,
+                    right: 3.w,
                     top: height*0.43,
                     child: Container(
                       height: 13.h,
