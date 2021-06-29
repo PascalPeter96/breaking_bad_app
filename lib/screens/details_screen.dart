@@ -38,8 +38,8 @@ class CharDetails extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(50.h),
-                        topLeft: Radius.circular(60),
+                        topRight: Radius.circular(30),
+                        topLeft: Radius.circular(30),
                       ),),
 
                     child: Column(
@@ -182,7 +182,7 @@ class CharDetails extends StatelessWidget {
                             ],
                           ),
                           title: Container(
-                            height: 10.h,
+                            height: 14.h,
                             width: 55.w,
                             decoration: BoxDecoration(
                                 color: (data[4] =="Alive")
@@ -204,7 +204,7 @@ class CharDetails extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    right: 3.w,
+                    right: 30,
                     top: height*0.43,
                     child: Container(
                       height: 13.h,
