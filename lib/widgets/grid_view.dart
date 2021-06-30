@@ -1,6 +1,7 @@
 import 'package:breaking_bad_quote_app/contollers/character_controller.dart';
 import 'package:breaking_bad_quote_app/contollers/homepage_controller.dart';
 import 'package:breaking_bad_quote_app/screens/details_screen.dart';
+import 'package:breaking_bad_quote_app/widgets/search_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,6 +16,8 @@ class CharacterGridView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SearchCharacter(),
+        Divider(),
         Obx(() {
           return Expanded(
               child: GridView.builder(

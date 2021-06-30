@@ -14,7 +14,7 @@ class BreakingBadApi {
   static Future<List<Character>?> getCharacters() async {
     http.Response characterUrl = await http.get(Uri.parse(CHARACTER_BASE_URL));
     var charString = (characterUrl.body);
-    print(charString);
+    // print(charString);
     return characterFromJson(charString);
     // return jsonString.map((json) => Character.fromJson(json)).toList();
   }
@@ -37,11 +37,20 @@ static Future<List<CharacterDetails>?> getDetails(int charId) async{
   http.Response detailsUrl = await http.get(Uri.parse('https://www.breakingbadapi.com/api/characters/${charId.toString()}'));
     if(detailsUrl.statusCode == 200){
       var detailsString =detailsUrl.body;
-      print(detailsString);
+      // print(detailsString);
       return characterDetailsFromJson(detailsString);
     }
-
 }
+
+//search BB Character
+   static Future<List<Character>?> searchCharacter(String query) async {
+    http.Response searchUrl = await http.get(Uri.parse('https://www.breakingbadapi.com/api/characters?name=$query'));
+    var searchString = (searchUrl.body);
+    print(searchString);
+    return characterFromJson(searchString);
+    // return jsonString.map((json) => Character.fromJson(json)).toList();
+  }
+
 
 }
 

@@ -7,7 +7,6 @@ import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
-import 'package:iphone_has_notch/iphone_has_notch.dart';
 
 class HomePage extends StatelessWidget {
   final CharacterController characterController = Get.put(
@@ -63,8 +62,8 @@ class HomePage extends StatelessWidget {
         bottomNavigationBar: Obx(() =>
             FancyBottomNavigation(
             tabs: [
-              TabData(iconData: Icons.home, title: 'Home'),
-              TabData(iconData: Icons.tv_sharp, title: 'Episodes'),
+              TabData(iconData: Icons.home_outlined, title: 'Home'),
+              TabData(iconData: Icons.tv_outlined, title: 'Episodes'),
               TabData(iconData: Icons.format_quote_outlined, title: 'Quotes'),
             ],
             onTabChangedListener: (position) {
