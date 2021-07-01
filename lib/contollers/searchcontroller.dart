@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 class SearchController extends GetxController{
   var searchList = <Character>[].obs;
   var isLoading = true.obs;
+  var folded = true.obs;
   late TextEditingController searchTextController;
 
   @override
@@ -22,8 +23,9 @@ class SearchController extends GetxController{
   }
 
   void searchCharacter() async{
-    
+    folded(false);
     try {
+      isLoading(true);
       var search = await BreakingBadApi.searchCharacter(searchTextController.text);
       if(search !=null){
         searchList.value = search;

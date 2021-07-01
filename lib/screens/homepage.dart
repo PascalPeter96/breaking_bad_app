@@ -3,6 +3,7 @@ import 'package:breaking_bad_quote_app/contollers/homepage_controller.dart';
 import 'package:breaking_bad_quote_app/screens/episodes_screen.dart';
 import 'package:breaking_bad_quote_app/screens/qoutes_screen.dart';
 import 'package:breaking_bad_quote_app/widgets/grid_view.dart';
+import 'package:breaking_bad_quote_app/widgets/search_widget.dart';
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -76,6 +77,18 @@ class HomePage extends StatelessWidget {
             activeIconColor: Colors.green,
             barBackgroundColor: Colors.amber,
             textColor: Colors.black,
+          ),
+        ),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              ListTile(
+                title: Text('Search'),
+                onTap: (){
+                  Get.to(() => SearchCharacter());
+                },
+              )
+            ],
           ),
         ),
       ),
